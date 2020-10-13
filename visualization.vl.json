@@ -1,59 +1,46 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "description": "A simple bar chart with embedded data.",
-  "data": {
-    "values": [
-      {
-        "a": "A",
-        "b": 28
-      },
-      {
-        "a": "B",
-        "b": 55
-      },
-      {
-        "a": "C",
-        "b": 43
-      },
-      {
-        "a": "D",
-        "b": 91
-      },
-      {
-        "a": "E",
-        "b": 81
-      },
-      {
-        "a": "F",
-        "b": 53
-      },
-      {
-        "a": "G",
-        "b": 19
-      },
-      {
-        "a": "H",
-        "b": 87
-      },
-      {
-        "a": "I",
-        "b": 52
-      }
-    ]
-  },
-  "mark": "bar",
-  "encoding": {
-    "x": {
-      "field": "a",
-      "type": "nominal",
-      "axis": {
-        "labelAngle": 0
-      }
-    },
-    "y": {
-      "field": "b",
-      "type": "quantitative"
-    }
-  },
-  "config": {}
+ "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+ "width": 800,
+ "height": 600,
+ "title": "Earthquakes of magnitude 4 or large between 4 Oct 2020 and 10 Oct 2020",
+ "projection": {"type": "equalEarth"},
+ "layer": [
+ {
+ "data": {
+ "url": "https://raw.githubusercontent.com/KaneSec/vega_lite/main/2_symbolmap/js/ne_110m_admin_0_countries.topojson",
+ "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+ },
+ "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
+ },
+ {
+ "data": {
+ "url": "https://raw.githubusercontent.com/KaneSec/vega_lite/main/2_symbolmap/data/earthquake.csv"
+ },
+ "encoding": {
+ "longitude": {"field": "longitude", "type": "quantitative"},
+ "latitude": {"field": "latitude", "type": "quantitative"}
+ },
+ "layer": [
+ {
+ "mark": {
+ "type": "circle",
+ "tooltip": {"content": "data"}
+ },
+ "encoding": {
+ "size": {"field": "mag",
+ "type": "quantitative",
+ "scale": {
+ "domain": [4, 8]
+ }},
+ "color": {"field": "depth",
+ "type": "quantitative",
+ "scale":{
+ "scheme":"reds"
+ }
+ }
+ }
+ }
+ ]
+ }
+ ]
 }
