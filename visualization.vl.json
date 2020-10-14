@@ -12,8 +12,7 @@
       "lookup": "properties.NAME",
       "from": {
         "data": {
-          "url": "https://raw.githubusercontent.com/span0017/FIT3179/main/master%20-%20Copy.csv"
-        },
+          "url": "https://raw.githubusercontent.com/span0017/FIT3179/main/master%20-%20Copy.csv"},
         "key": "country",
         "fields": ["population"]
       }
