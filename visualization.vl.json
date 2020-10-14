@@ -18,8 +18,7 @@
         
       },
       "encoding": {
-        "longitude": {"field": "longitude", "type": "quantitative"},
-        "latitude": {"field": "latitude", "type": "quantitative"}
+        "longitude": {"field": "country", "type": "quantitative"},
       },
       "layer": [
         {
