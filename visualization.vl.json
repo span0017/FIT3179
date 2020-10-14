@@ -1,42 +1,35 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": "COVID-19 Active Cases (10 Oct 2020)",
   "width": 800,
-  "height": 500,
-  "title": "Master Content",
-  "projection": {"type": "equalEarth"},
-  "layer": [
+  "height": 600,
+  "data": {
+    "url": "https://raw.githubusercontent.com/span0017/FIT3179/main/map.geo.topojson",
+    "format": {"type": "topojson", "feature": "map.geo.topojson"}
+  },
+  "transform": [
     {
-      "data": {
-        "url": "https://raw.githubusercontent.com/span0017/FIT3179/main/map.geo.topojson",
-        "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
-      },
-      "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
+      "lookup": "properties.NAME",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/span0017/FIT3179/main/master%20-%20Copy.csv"
+        },
+        "key": "country",
+        "fields": ["population"]
+      }
     },
-    {
-      "data": {
-        "url": "https://raw.githubusercontent.com/span0017/FIT3179/main/master%20-%20Copy.csv"
-        
-      },
-      "encoding": {
-        "longitude": {"field": "country", "type": "quantitative"},
-      },
-      "layer": [
-        {
-          "mark": {"type": "circle", "tooltip": {"content": "data"}},
-          "encoding": {
-            "size": {
-              "field": "mag",
-              "type": "quantitative",
-              "scale": {"domain": [4, 8]}
-            },
-            "color": {
-              "field": "depth",
-              "type": "quantitative",
-              "scale": {"scheme": "reds"}
-            }
-          }
-        }
-      ]
-    }
-  ]
+  ],
+  "projection": {"type": "equirectangular"},
+  "mark": {"type": "geoshape"},
+  "encoding": {
+    "color": {
+      "field": "Active Cases",
+      "type": "quantitative",
+      "scale": {"type": "log"}
+    },
+    "tooltip": [
+      {"field": "properties.NAME", "type": "nominal", "title": "Country"},
+      {"field": "Population", "type": "quantitative"}
+    ]
+  }
 }
