@@ -3,14 +3,24 @@
   "data": {
     "url": "https://raw.githubusercontent.com/span0017/FIT3179/main/countries.csv"
   },
-  "title": "Population greater than 1 million",
+  "title": "Literacy Rate of countries with population greater than 100 million",
   "transform": [{"filter": "datum.Population > 100000000"}],
   "width": 500,
   "height": 600,
-  "mark": "bar",
   "encoding": {
-    "x": {"field": "Country", "type": "nominal", "title": "Country"},
-    "y": {"field": "Literacy (%)", "type": "quantitative"}
+    "y": {"field": "Country", "type": "nominal", "title": "Country"},
+    "x": {"field": "Literacy (%)", "type": "quantitative"}
   },
-  "config": {}
+  "layer": [
+    {"mark": "bar"},
+    {
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "middle",
+        "dx": 20
+      },
+      "encoding": {"text": {"field": "Literacy (%)", "type": "quantitative"}}
+    }
+  ]
 }
