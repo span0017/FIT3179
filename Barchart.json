@@ -1,0 +1,16 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/span0017/FIT3179/main/countries.csv"
+  },
+  "title": "Population greater than 1 million",
+  "transform": [{"filter": "datum.Population > 100000000"}],
+  "width": 500,
+  "height": 600,
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "Country", "type": "nominal", "title": "Country"},
+    "y": {"field": "Literacy (%)", "type": "quantitative"}
+  },
+  "config": {}
+}
