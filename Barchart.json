@@ -7,9 +7,10 @@
   "transform": [{"filter": "datum.Population > 100000000"}],
   "width": 500,
   "height": 600,
+  "config"   : {"view": {"stroke": "transparent"}},
   "encoding": {
     "y": {"field": "Country", "type": "nominal", "title": "Country"},
-    "x": {"field": "Literacy (%)", "type": "quantitative"}
+    "x": {"field": "Literacy (%)", "type": "quantitative", "axis":null}
   },
   "layer": [
     {"mark": "bar"},
@@ -18,7 +19,8 @@
         "type": "text",
         "align": "center",
         "baseline": "middle",
-        "dx": 20
+        "dx": 20,
+        "fontSize": {"expr": "12"}
       },
       "encoding": {"text": {"field": "Literacy (%)", "type": "quantitative"}}
     }
