@@ -11,7 +11,6 @@
 <body>
   
 <h1>Dashboard</h1>
-<div id="vis"></div>
   
 <h2>This is the first visualisation</h2>
 <div id="Map"></div>
@@ -22,11 +21,11 @@
 <script type="text/javascript">
   var vis1 = "https://span0017.github.io/FIT3179/Map.json";
  
-  vegaEmbed('#vis', vis1).then(function(result) {
+  vegaEmbed('#Map', vis1).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
   
-  var vis2 = "https://span0017.github.io/FIT3179/Interactive Scatterplot.json";
+  var vis2 = "https://span0017.github.io/FIT3179/Interactive_Scatterplot.json";
  
   vegaEmbed('#Interactive Scatterplot', vis2).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
