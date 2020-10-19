@@ -126,9 +126,11 @@
         },
         "tooltip": [
           {"field": "Country", "type": "nominal"},
+          {"field": "Region", "type": "nominal"},
           {"field": "Deathrate", "type": "quantitative", "format": ","},
           {"field": "Birthrate", "type": "quantitative", "format": ","},
           {"field": "Population", "type": "quantitative", "format": ","}
+         
         ]
       }
     },
@@ -153,9 +155,11 @@
         },
         "tooltip": [
           {"field": "Country", "type": "nominal"},
+          {"field": "Region", "type": "nominal"},
           {"field": "Deathrate", "type": "quantitative", "format": ","},
           {"field": "Birthrate", "type": "quantitative", "format": ","},
           {"field": "Population", "type": "quantitative", "format": ","}
+          
         ]
       }
     }
