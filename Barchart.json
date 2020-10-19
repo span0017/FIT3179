@@ -3,7 +3,7 @@
   "data": {
     "url": "https://raw.githubusercontent.com/span0017/FIT3179/main/countries.csv"
   },
-  "title": "Literacy Rate of countries with population greater than 100 million",
+  "title": "Literacy Rate (in %) of countries with population greater than 100 million",
   "transform": [{"filter": "datum.Population > 100000000"}],
   "width": 500,
   "height": 600,
