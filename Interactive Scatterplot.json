@@ -60,10 +60,6 @@
     {"filter": "datum.Population > Population_Above"},
     {
       "filter": "Continent_selection == null || datum.Region == Continent_selection"
-    },
-    {
-      "calculate": "datum.Birthrate/datum.Population * 10000",
-      "as": "Birthrate per 10,000 Population"
     }
   ],
   "encoding": {
