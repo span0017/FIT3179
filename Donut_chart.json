@@ -41,7 +41,11 @@
           "#f58518"
         ]
       }
-    }
+    },
+    "tooltip": [
+      {"field": "Region", "type": "nominal", "title": "Region"},
+      {"field": "Area", "type": "quantitative", "title": "Area (sq. mi.)"}
+    ]
   },
   "view": {"stroke": null},
   "config": {}
