@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "description": "A simple donut chart with embedded data.",
+  "title": "The total area (sq. mi) in each region",
   "width": 800,
   "height": 600,
   "data": {
