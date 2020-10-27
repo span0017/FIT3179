@@ -23,8 +23,11 @@
  <h2>This is the fourth visualisation</h2>
  <div id="Stacked_density"></div> 
   
- <h2>This is teh fifth visualization</h2>
+ <h2>This is the fifth visualization</h2>
  <div id="Parallel_Coordinate_Plot"></div>  
+  
+ <h2>This is the sixth visualization</h2>
+ <div id="Donut_chart"></div>  
  
 <script type="text/javascript">
   var vis1 = "https://span0017.github.io/FIT3179/Map.json";
@@ -54,6 +57,12 @@
   var vis5 = "https://raw.githubusercontent.com/span0017/FIT3179/main/Parallel_Coordinate_Plot.json";
  
   vegaEmbed('#Parallel_Coordinate_Plot', vis5).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  
+  var vis6 = "https://raw.githubusercontent.com/span0017/FIT3179/main/Donut_chart.json";
+ 
+  vegaEmbed('#Donut_chart', vis6).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
   
