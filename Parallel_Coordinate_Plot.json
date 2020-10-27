@@ -4,8 +4,8 @@
   "data": {
     "url": "https://raw.githubusercontent.com/span0017/FIT3179/main/countries.csv"
   },
-  "width": 600,
-  "height": 300,
+  "width": 800,
+  "height": 600,
   "transform": [
     {
       "filter": "datum['Region'] == 'WESTERN EUROPE' || datum['Region'] == 'LATIN AMER. & CARIB' || datum['Region'] == 'SUB-SAHARAN AFRICA' || datum['Region'] == 'ASIA (EX. NEAR EAST)'"
