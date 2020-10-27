@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "title": "The total area (sq. mi) in each region",
+  "title": "The total area (square mile) in each region",
   "width": 800,
   "height": 600,
   "data": {
