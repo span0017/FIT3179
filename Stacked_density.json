@@ -101,7 +101,7 @@
         },
         "tooltip": [
           {"field": "Region", "type": "nominal", "title": "Region"},
-          {"field": "density", "type": "quantitative", "format": ".3f"}
+          {"field": "density", "type": "quantitative", "format": ".3f", "title": "Density"}
         ]
       }
     }
