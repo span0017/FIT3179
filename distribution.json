@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "title": "Distribution of Birthrate",
+  "title": "Distribution of Phones (per 1000 people)",
   "width": 800,
-  "height": 600,
+  "height": 150,
   "data": {
     "url": "https://raw.githubusercontent.com/span0017/FIT3179/main/countries.csv"
   },
@@ -58,15 +58,21 @@
       "mark": "area",
       "transform": [
         {
-          "density": "Birthrate",
+
+          "density": "Phones (per 1000)",
           "groupby": ["Region"],
-          "bandwidth": 4.8,
-          "extent": [0, 50]
+          "bandwidth":40,
+          "extent": [0, 1000]
         }
       ],
       "encoding": {
-        "x": {"field": "value", "type": "quantitative", "title": "Birthrate"},
-        "y": {"field": "density", "type": "quantitative", "stack": "zero", "title": "Density"},
+        "x": {"field": "value", "type": "quantitative", "title": "Phones (per 1000 people)"},
+        "y": {
+          "field": "density",
+          "type": "quantitative",
+          "stack": "zero",
+          "title": "Density"
+        },
         "color": {
           "field": "Region",
           "type": "nominal",
@@ -101,7 +107,12 @@
         },
         "tooltip": [
           {"field": "Region", "type": "nominal", "title": "Region"},
-          {"field": "density", "type": "quantitative", "format": ".3f", "title": "Density"}
+          {
+            "field": "density",
+            "type": "quantitative",
+            "format": ".3f",
+            "title": "Density"
+          }
         ]
       }
     }
