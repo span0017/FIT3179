@@ -52,9 +52,9 @@
         "y": {"type": "quantitative", "field": "norm_val", "axis": null},
         "tooltip": [
           {"type": "nominal", "field": "Country"},
-          {"type": "quantitative", "field": "Agriculture (%)"},
-          {"type": "quantitative", "field": "Industry (%)"},
-          {"type": "quantitative", "field": "Service (%)"}
+          {"type": "quantitative", "field": "Birthrate"},
+          {"type": "quantitative", "field": "Deathrate"},
+          {"type": "quantitative", "field": "Infant mortality (per 1000 births)"}
         ]
       }
     },
