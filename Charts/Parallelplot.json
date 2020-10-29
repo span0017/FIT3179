@@ -4,7 +4,7 @@
   "data": {
     "url": "https://raw.githubusercontent.com/span0017/FIT3179/main/countries.json"
   },
-  "width": 700,
+  "width": 600,
   "height": 500,
   "background": "whitesmoke",
   "transform": [
