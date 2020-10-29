@@ -3,6 +3,7 @@
   "title": "Distribution of Phones (per 1000 people)",
   "width": 800,
   "height": 150,
+  "background": "aliceblue",
   "data": {
     "url": "https://raw.githubusercontent.com/span0017/FIT3179/main/countries.csv"
   },
