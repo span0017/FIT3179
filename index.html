@@ -18,57 +18,57 @@
 <h1>Dashboard</h1>
   
  <h2>This is the first visualisation apple</h2>
- <div id="Map"></div>
+ <div id="Choropleth"></div>
   
  <h2>This is the second visualisation</h2>
- <div id="Interactive_Bubbleplot"></div>
+ <div id="Bubblechart"></div>
   
  <h2>This is the third visualisation</h2>
  <div id="Barchart"></div> 
   
  <h2>This is the fourth visualisation</h2>
- <div id="Stacked_density"></div> 
+ <div id="Distributionchart"></div> 
   
  <h2>This is the fifth visualization</h2>
- <div id="Parallel_Coordinate_Plot"></div>  
+ <div id="Parallelplot"></div>  
   
  <h2>This is the sixth visualization</h2>
- <div id="Donut_chart"></div>  
+ <div id="Donutchart"></div>  
  
 <script type="text/javascript">
-  var vis1 = "https://raw.githubusercontent.com/span0017/FIT3179/main/classification_map.json";
+  var vis1 = "https://raw.githubusercontent.com/span0017/FIT3179/main/Charts/Choropleth.json";
  
-  vegaEmbed('#Map', vis1).then(function(result) {
+  vegaEmbed('#Choropleth', vis1).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
   
-  var vis2 = "https://span0017.github.io/FIT3179/Interactive_Bubbleplot.json";
+  var vis2 = "https://raw.githubusercontent.com/span0017/FIT3179/main/Charts/Bubblechart.json";
  
-  vegaEmbed('#Interactive_Bubbleplot', vis2).then(function(result) {
+  vegaEmbed('#Bubblechart', vis2).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
   
-  var vis3 = "https://span0017.github.io/FIT3179/Barchart.json";
+  var vis3 = "https://raw.githubusercontent.com/span0017/FIT3179/main/Charts/Barchart.json";
  
   vegaEmbed('#Barchart', vis3).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
   
-  var vis4 = "https://span0017.github.io/FIT3179/distribution.json";
+  var vis4 = "https://raw.githubusercontent.com/span0017/FIT3179/main/Charts/Distributionchart.json";
  
-  vegaEmbed('#Stacked_density', vis4).then(function(result) {
+  vegaEmbed('#Distributionchart', vis4).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
   
-  var vis5 = "https://raw.githubusercontent.com/span0017/FIT3179/main/demographics_parallel.json";
+  var vis5 = "https://raw.githubusercontent.com/span0017/FIT3179/main/Charts/Parallelplot.json";
  
-  vegaEmbed('#Parallel_Coordinate_Plot', vis5).then(function(result) {
+  vegaEmbed('#Parallelplot', vis5).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
   
-  var vis6 = "https://raw.githubusercontent.com/span0017/FIT3179/main/Donut_chart.json";
+  var vis6 = "https://raw.githubusercontent.com/span0017/FIT3179/main/Charts/Donutchart.json";
  
-  vegaEmbed('#Donut_chart', vis6).then(function(result) {
+  vegaEmbed('#Donutchart', vis6).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
   
