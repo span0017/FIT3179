@@ -6,15 +6,15 @@
   "title": "Literacy Rate (in %) of countries with population greater than 100 million",
   "transform": [{"filter": "datum.Population > 100000000"}],
   "width": 800,
-  "height": 600,
-  "background" : "whitesmoke",
-  "config"   : {"view": {"stroke": "transparent"}},
+  "height": 450,
+  "background": "whitesmoke",
+  "config": {"view": {"stroke": "transparent"}, "bar" : {"discreteBandSize": 30}},
   "encoding": {
     "y": {"field": "Country", "type": "nominal", "title": "Country"},
-    "x": {"field": "Literacy (%)", "type": "quantitative", "axis":null}
+    "x": {"field": "Literacy (%)", "type": "quantitative", "axis": null}
   },
   "layer": [
-    {"mark": "bar"},
+    {"mark": {"type" : "bar"}},
     {
       "mark": {
         "type": "text",
