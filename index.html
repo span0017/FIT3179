@@ -27,7 +27,7 @@
        background-color: lightgray;
      }
      .page{
-       width: 850px;    
+       width: 1200px;    
        background-color: white;   
        margin: auto;
        padding: 50px;
@@ -82,8 +82,16 @@
       <div class="pure-u-2-3">
         <div id="Donutchart"  class="vis-container"></div>
       </div>
- 
+                                                   
+     <!-- end pure grid group -->
+  
+    <div class="pure-g">
+      <div class="pure-u-1-1 small-font">
+        <p>This visualisation is created by <a href="https://github.com/KadekSatriadi" target="_blank">Kadek Satriadi</a>. The datasource is <a href="#"" target="_blank">some data repository online</href>.</p>
+      </div>
+    </div>
 <script type="text/javascript">
+  
   var vis1 = "https://raw.githubusercontent.com/span0017/FIT3179/main/Charts/Choropleth.json";
  
   vegaEmbed('#Choropleth', vis1).then(function(result) {
