@@ -70,8 +70,8 @@
     {
       "mark": "line",     
       "encoding": {
-        "legend": {"offset": -60},
         "color": {
+          "legend": {"offset": -60},
           "type": "nominal",
           "field": "Region",
           "scale": {
