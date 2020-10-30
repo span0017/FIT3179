@@ -7,8 +7,46 @@
   "width": 600,
   "height": 500,
   "background": "whitesmoke",
+  "params": [
+    {
+      "name": "Region_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "ASIA (EX. NEAR EAST)",
+          "NEAR EAST",
+          "C.W. OF IND. STATES",
+          "EASTERN EUROPE",
+          "WESTERN EUROPE",
+          "BALTICS",
+          "NORTHERN AFRICA",
+          "SUB-SAHARAN AFRICA",
+          "LATIN AMER. & CARIB",
+          "NORTHERN AMERICA",
+          "OCEANIA"
+        ],
+        "labels": [
+          "Show All",
+          "ASIA (EX. NEAR EAST)",
+          "NEAR EAST",
+          "C.W. OF IND. STATES",
+          "EASTERN EUROPE",
+          "WESTERN EUROPE",
+          "BALTICS",
+          "NORTHERN AFRICA",
+          "SUB-SAHARAN AFRICA",
+          "LATIN AMER. & CARIB",
+          "NORTHERN AMERICA",
+          "OCEANIA"
+        ],
+        "name": "Region Selection: "
+      }
+    }
+  ],
   "transform": [
     {"filter": "datum['Agriculture (%)']"},
+    {"filter": "Region_selection == null || datum.Region == Region_selection"},
     {"window": [{"op": "count", "as": "index"}]},
     {"fold": ["Birthrate", "Deathrate", "Infant mortality (per 1000 births)"]},
     {
@@ -38,12 +76,30 @@
           "scale": {
             "domain": [
               "ASIA (EX. NEAR EAST)",
+              "NEAR EAST",
+              "C.W. OF IND. STATES",
+              "EASTERN EUROPE",
+              "WESTERN EUROPE",
+              "BALTICS",
+              "NORTHERN AFRICA",
               "SUB-SAHARAN AFRICA",
               "LATIN AMER. & CARIB",
-              "WESTERN EUROPE",
+              "NORTHERN AMERICA",
               "OCEANIA"
             ],
-            "range": ["#ff0000", "#3d84a8", "#f9ed69", "#17b978", "#000000"]
+            "range": [
+              "#ff0000",
+              "#ff0000",
+              "#0083C5",
+              "#0083C5",
+              "#0083C5",
+              "#0083C5",
+              "#17b978",
+              "#17b978",
+              "#FFEE00",
+              "#7300FF",
+              "#000000"
+            ]
           }
         },
         "detail": {"type": "nominal", "field": "index"},
@@ -54,7 +110,11 @@
           {"type": "nominal", "field": "Country"},
           {"type": "quantitative", "field": "Birthrate"},
           {"type": "quantitative", "field": "Deathrate"},
-          {"type": "quantitative", "field": "Infant mortality (per 1000 births)"}
+          {
+            "type": "quantitative",
+            "field": "Infant mortality (per 1000 births)",
+            "title": "Infant Mortality"
+          }
         ]
       }
     },
