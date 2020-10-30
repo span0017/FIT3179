@@ -54,45 +54,47 @@
   </style>
 </head>
 <body>
-<div style = "margin-left:20% ; margin-right:20%">
- <h1>Demographics of Countries around the <b>World</b></h1>
- <br>
- <span id="intro_text", style="font-size:16pt ; font-family: "Cambria">As ("Legislative Assembly of New Brunswick", 2020) mentions it is important to know about the demographics of each country as it affects the economic, social, cultural and politcal aspect of human activity. Knowing the demographics of countries can help understand past trends and help governments prepare for developments and policies. It also allows users to to observe the economic and social trends.</span>
- <h2>This is the first visualisation apple</h2>
- <div id="Choropleth"></div>
-  
- <h2>This is the second visualisation</h2>
- <div id="Bubblechart"></div>
-  
- <h2>This is the third visualisation</h2>
- <div id="Barchart"></div> 
-  
- <h2>This is the fourth visualisation</h2>
- <div id="Distributionchart"></div> 
- <!--
- <h2>This is the fifth visualization</h2>
- <div id="Parallelplot"></div>  
-  
- <h2>This is the sixth visualization</h2>
- <div id="Donutchart"></div>  
-  --> 
- <div class="pure-g">                    
-      <div class="pure-u-1-2">
-        <div id="Parallelplot"  class="vis-container"></div>
+<div class="page">
+  <div style = "margin-left:20% ; margin-right:20%">
+   <h1>Demographics of Countries around the <b>World</b></h1>
+   <br>
+   <span id="intro_text", style="font-size:16pt ; font-family: "Cambria">As ("Legislative Assembly of New Brunswick", 2020) mentions it is important to know about the demographics of each country as it affects the economic, social, cultural and politcal aspect of human activity. Knowing the demographics of countries can help understand past trends and help governments prepare for developments and policies. It also allows users to to observe the economic and social trends.</span>
+   <h2>This is the first visualisation apple</h2>
+   <div id="Choropleth"></div>
+
+   <h2>This is the second visualisation</h2>
+   <div id="Bubblechart"></div>
+
+   <h2>This is the third visualisation</h2>
+   <div id="Barchart"></div> 
+
+   <h2>This is the fourth visualisation</h2>
+   <div id="Distributionchart"></div> 
+   <!--
+   <h2>This is the fifth visualization</h2>
+   <div id="Parallelplot"></div>  
+
+   <h2>This is the sixth visualization</h2>
+   <div id="Donutchart"></div>  
+    --> 
+   <div class="pure-g">                    
+        <div class="pure-u-1-2">
+          <div id="Parallelplot"  class="vis-container"></div>
+        </div>
+
+        <div class="pure-u-1-2">
+          <div id="Donutchart"  class="vis-container"></div>
+        </div>
+   </div>
+
+    <!-- end pure grid group -->
+
+      <div class="pure-g">
+        <div class="pure-u-1-1 small-font">
+          <p>This visualisation is created by <a href="https://github.com/span0017" target="_blank">Pang Yiew Kin Samuel</a>. The datasource is <a href="https://www.kaggle.com/mehmettek/data-science-with-world-countries"" target="_blank">from kaggle.</href></p>
+        </div>
       </div>
-                                                     
-      <div class="pure-u-1-2">
-        <div id="Donutchart"  class="vis-container"></div>
-      </div>
- </div>
-                                                   
-  <!-- end pure grid group -->
-  
-    <div class="pure-g">
-      <div class="pure-u-1-1 small-font">
-        <p>This visualisation is created by <a href="https://github.com/span0017" target="_blank">Pang Yiew Kin Samuel</a>. The datasource is <a href="https://www.kaggle.com/mehmettek/data-science-with-world-countries"" target="_blank">from kaggle.</href></p>
-      </div>
-    </div>
+  </div>
 <script type="text/javascript">
   
   var vis1 = "https://raw.githubusercontent.com/span0017/FIT3179/main/Charts/Choropleth.json";
