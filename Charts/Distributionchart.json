@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "title": "Distribution of Phones (per 1000 people)",
-  "width": 800,
-  "height": 150,
+  "width": 1100,
+  "height": 250,
   "background": "whitesmoke",
   "data": {
     "url": "https://raw.githubusercontent.com/span0017/FIT3179/main/countries.csv"
