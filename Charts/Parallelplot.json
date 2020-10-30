@@ -68,8 +68,9 @@
       "encoding": {"detail": {"aggregate": "count"}, "x": {"field": "key"}}
     },
     {
-      "mark": "line",
+      "mark": "line",     
       "encoding": {
+        "legend": {"offset": -60},
         "color": {
           "type": "nominal",
           "field": "Region",
