@@ -1,19 +1,19 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "title": "The total area (square mile) in each region",
-  "width": 800,
-  "height": 600,
+  "title": {"text":"Region's Area (sq. mi.)", "dy":235},
   "background" : "whitesmoke",
+  "width": 400,
+  "height": 375,
   "data": {
-    "url": "https://raw.githubusercontent.com/span0017/FIT3179/main/countries.csv"
+    "url": "https://raw.githubusercontent.com/span0017/FIT3179/main/countries.json"
   },
-  "mark": {"type": "arc", "innerRadius": 50},
   "encoding": {
-    "theta": {"field": "Area", "type": "quantitative"},
+    "theta": {"field": "Area", "type": "quantitative", "stack": true},
     "color": {
       "field": "Region_1",
-      "title": "Region",
+      "title" : "Region",
       "type": "nominal",
+      "legend": {"offset" : 50},
       "scale": {
         "domain": [
           "ASIA (EX. NEAR EAST)",
@@ -29,25 +29,31 @@
           "BALTICS"
         ],
         "range": [
-          "#4c78a8",
-          "#72b7b2",
-          "#b279a2",
+          "#0E7BFF",
+          "#00C8FF",
+          "#2ED739",
           "#9d755d",
-          "#bab0ac",
-          "#f4f1bb",
-          "#54a24b",
-          "#e45656",
-          "#ffca3b",
-          "#ff9da7",
-          "#f58518"
+          "#8F8F8F",
+          "#910CC9",
+          "#FF8C00",
+          "#FD2020",
+          "#b279a2",
+          "#FF5EB1",
+          "#000000"
         ]
       }
     },
     "tooltip": [
-      {"field": "Region", "type": "nominal", "title": "Region"},
+      {"field": "Region_1", "type": "nominal", "title": "Region"},
       {"field": "Area", "type": "quantitative", "title": "Area (sq. mi.)"}
     ]
   },
-  "view": {"stroke": null},
-  "config": {}
+  "layer": [
+    {"mark": {"type": "arc", "innerRadius": 100}},
+    {
+      "mark": {"type": "text", "radius": 220},
+      "encoding": {"text": {"field": "Area", "type": "nominal"}}
+    }
+  ],
+  "view": {"stroke": null}
 }
