@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "width": 800,
+  "width":1100,
   "height": 600,
   "background": "whitesmoke",
   "title": "Birthrate and Deathrate per Country by Region and Population",
