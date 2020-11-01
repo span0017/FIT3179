@@ -79,6 +79,9 @@
   "layer": [
     {
       "selection": {
+       "grid" :{
+          "type" : "interval", "bind" : "scales"
+        },
         "region_highlight": {
           "type": "multi",
           "fields": ["Region"],
